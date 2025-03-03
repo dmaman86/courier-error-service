@@ -2,7 +2,11 @@ package com.courier.errorservice.objects.entity;
 
 import java.time.LocalDateTime;
 
+import com.courier.errorservice.objects.enums.ErrorSeverity;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -30,4 +34,7 @@ public class ErrorLog {
   private String message;
   private String exception;
   private String path;
+
+  @Enumerated(EnumType.STRING)
+  private ErrorSeverity severity;
 }
