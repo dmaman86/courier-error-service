@@ -1,25 +1,24 @@
 package com.courier.errorservice.objects.dto;
 
-import java.time.LocalDateTime;
-
 import com.courier.errorservice.objects.enums.ErrorSeverity;
 
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ErrorLogDto {
 
-  private LocalDateTime timestamp;
+  private String timestamp;
   private int status;
   private String error;
   private String message;
   private String exception;
   private String path;
 
-  @Enumerated(EnumType.STRING)
   private ErrorSeverity severity;
 }

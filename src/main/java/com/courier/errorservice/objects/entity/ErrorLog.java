@@ -1,6 +1,5 @@
 package com.courier.errorservice.objects.entity;
 
-import java.time.LocalDateTime;
 
 import com.courier.errorservice.objects.enums.ErrorSeverity;
 
@@ -28,7 +27,7 @@ public class ErrorLog {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private LocalDateTime timestamp;
+  private String timestamp;
   private int status;
   private String error;
   private String message;
